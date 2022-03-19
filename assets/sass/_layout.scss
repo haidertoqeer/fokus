@@ -1,0 +1,215 @@
+.box--shapes {
+  display: flex;
+  padding: 20px 0;
+  height: 100%;
+  .right-arrow {
+    clip-path: polygon(100% 50%, 0 100%, 0 0);
+    display: block;
+    height: 100%;
+    width: 33.3%;
+    background: $red-color;
+  }
+}
+
+.box--text {
+  padding: 50px 0 0 20px;
+  position: relative;
+  max-width: 600px;
+  left: 80px;
+  @include breakpoint(xxl) {
+    left: 0px;
+    padding: 30px 0 0 20px;
+  }
+  @include breakpoint(lg) {
+    padding: 10px 0 0 10px;
+  }
+  h1 {
+    width: 80%;
+    font-size: 30px;
+    font-weight: bold;
+    @include breakpoint(xl) {
+      font-size: 26px;
+    }
+    @include breakpoint(lg) {
+      font-size: 24px;
+    }
+  }
+  p {
+    width: 70%;
+    font-size: 12px;
+    font-weight: normal;
+    @include breakpoint(xl) {
+      font-size: 11px;
+      width: 70%;
+    }
+  }
+}
+.right--shap {
+  position: relative;
+  &:after {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    background-color: $red-color;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    min-height: 100%;
+    content: "";
+    top: 0;
+    right: 0;
+
+    @include breakpoint(sm) {
+      width: 100%;
+    }
+  }
+}
+.btn--learn-more {
+  background-color: $red-color;
+  color: #fff;
+  padding: 5px 25px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  @include breakpoint(lg) {
+    margin-top: 0;
+  }
+  @include breakpoint(md) {
+    margin-top: 20px;
+  }
+  &:hover {
+    color: #fff;
+  }
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-left: 20px solid $red-color-sharp;
+    border-bottom: 17px solid transparent;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.row--second {
+  height: 25%;
+  div {
+    height: 100%;
+    @include breakpoint(md) {
+      height: 50%;
+    }
+  }
+  .box--right-shape {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    background-color: $red-color;
+    height: 100%;
+    width: 100%;
+  }
+  .box--img-1 {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      object-position: 140% 100%;
+      object-fit: cover;
+      transform: scale(1.7);
+      @include breakpoint(md) {
+        object-position: 116% 100%;
+      }
+    }
+  }
+  .box--left-shap {
+    clip-path: polygon(0 100%, 100% 0, 0 0);
+    background-color: $red-color;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+  }
+}
+
+.row--third {
+  .box--shapes {
+    padding: 0px;
+    @include breakpoint(md) {
+      height: 100%;
+    }
+    @include breakpoint(sm) {
+      height: 0%;
+    }
+    .right-arrow {
+      width: 100%;
+    }
+  }
+  @include breakpoint(lg) {
+    div {
+      height: 100%;
+    }
+  }
+
+  @include breakpoint(md) {
+    height: 50%;
+  }
+  .background--dark-blue {
+    background-color: $blue-color-dark;
+    .box--text {
+      left: 0;
+      max-width: unset;
+      color: #fff;
+      margin: 50px;
+      @include breakpoint(lg) {
+        margin: 10px;
+      }
+
+      h1 {
+        width: 100%;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+  .box--img-2 {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      object-position: 68% 99%;
+      object-fit: cover;
+      transform: scale(1.7);
+    }
+  }
+  .btn--donate-now {
+    background-color: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-family: "Oswald";
+    padding: 5px 25px;
+    margin-top: 20px;
+    display: inline-block;
+    position: relative;
+    @include breakpoint(lg) {
+      margin-top: 10px;
+    }
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 17px solid transparent;
+      border-left: 20px solid rgba(0, 0, 0, 0.082);
+      border-bottom: 17px solid transparent;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+  }
+}
+
+.height-50-small {
+  @include breakpoint(sm) {
+    height: 50% !important;
+  }
+}
